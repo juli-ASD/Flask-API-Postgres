@@ -1,8 +1,8 @@
 version: '3.5'
 services:
   database:
-    container_name: postgres
-    image: postgres:latest
+    container_name: db2
+    image: postgres:12.7-alpine
     env_file: database.conf
     ports:
       - 5432:5432

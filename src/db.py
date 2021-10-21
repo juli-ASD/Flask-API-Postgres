@@ -5,6 +5,6 @@ from sqlalchemy.orm.session import Session
 
 
 Base = declarative_base() #Permitir ralizar el mapeo de la base de datos
-engine = create_engine("postgresql://postgres:root@localhost:5432/flask_db") #conectar a base de datos
+engine = create_engine("postgresql+psycopg2://postgres:root@localhost:5432/flask_db") #conectar a base de datos
 
 Session = sessionmaker(bind=engine) #Guardar transacciones en base datos
