@@ -17,7 +17,7 @@ def ping():
 @app.route('/create_user' ,methods=['POST']) 
 def create_user():
     
-    data = json.loads(request.data)  #Diccionario, recibido de mensaje JSON desde postman
+    data = request.get_json()  #Diccionario, recibido de mensaje JSON desde postman
     #Manejo de errores y respuestas a peticiones POST
     if 'username' not in data :
         return jsonify({"response": "No está enviando el username"})
